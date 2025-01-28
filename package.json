@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production eleventy",
-    "start": "NODE_ENV=development eleventy --serve"
+    "build": "cross-env NODE_ENV=production eleventy",
+    "start": "cross-env NODE_ENV=development eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.3.5",
     "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
     "postcss": "^8.5.1",
     "sass": "^1.83.4",
     "stylelint": "^16.14.1",
