@@ -1,0 +1,34 @@
+{
+  "name": "standoutsites",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production eleventy",
+    "start": "NODE_ENV=development eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschloty/standoutsites-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jschloty/standoutsites-website/issues"
+  },
+  "homepage": "https://github.com/jschloty/standoutsites-website#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "sass": "^1.83.4",
+    "stylelint": "^16.14.1",
+    "typescript": "^5.7.3"
+  }
+}
