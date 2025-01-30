@@ -1,6 +1,7 @@
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
-import sass from "sass";
+import * as sass from "sass";
+import path from "node:path";
 import autoprefixer from "autoprefixer";
 import postcss from "postcss";
 import { transpileModule } from "typescript";
@@ -9,6 +10,8 @@ export default function(eleventyConfig) {
     eleventyConfig.addPlugin(EleventyRenderPlugin);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     
+    eleventyConfig.addTemplateFormats("scss");
+
     // Add scss template type. Does some post-processing after scss compilation.
     eleventyConfig.addExtension("scss", {
         outputFileExtension: "css",
@@ -28,7 +31,8 @@ export default function(eleventyConfig) {
                     this.config.dir.includes,
                     this.config.dir.input + "/node_modules"
                 ],
-                sourceMap: environment === "development"
+                sourceMap: environment === "development",
+                quietDeps: true // make this false if shit breaks!
             });
 
             this.addDependencies(inputPath, compiled.loadedUrls);
