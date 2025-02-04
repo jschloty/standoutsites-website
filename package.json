@@ -21,14 +21,15 @@
   "homepage": "https://github.com/jschloty/standoutsites-website#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "eleventy-critical-css": "^2.0.2"
   },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.3.5",
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
     "postcss": "^8.5.1",
-    "sass": "^1.83.4",
+    "sass": "1.77.6",
     "stylelint": "^16.14.1",
     "typescript": "^5.7.3"
   },
